@@ -1,0 +1,17 @@
+{% extends 'Base.html' %}
+
+ {% block title %}add {% endblock %}
+
+
+{% block content %}
+{{info}}
+<form action="/add/" method="post">
+  Title:<br>
+  <input type="text" name="title" required><br>
+  Content:<br>
+  <input type="text" name="content" required><br>
+    <input type="hidden" name="ok">
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
